@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+import "general.proto";
+
+service ProductService {
+    rpc GetAll (Empty) returns (ProductList) {}
+    rpc GetByid (ProductId) returns (Product) {}
+    rpc Delete (ProductId) returns (Empty) {}
+    rpc Edit (Product) returns (Product) {}
+    rpc Add (Product) returns (Product) {}
+}
+
+message Product {
+    string id = 1;
+    string title = 2;
+    string body = 3;
+    string postImage = 4;
+}
+
+message ProductId {
+    string id = 1;
+}
+
+message ProductList {
+    repeated Product product = 1;
+}
