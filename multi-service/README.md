@@ -1,44 +1,27 @@
-# Judul Utama
+# Multiple Proto & Service
 
-Ini adalah teks biasa. *Ini adalah teks miring*, **ini teks tebal**, dan ***ini teks tebal miring***. Anda juga dapat ~~menggaris bawahi teks ini~~.
+#### Struktur Folder:
+- **/proto**
+  - `order.proto`
+  - `dll.proto`
+- **/services**
+  - `order.service.js`
+  - `dll.service.js`
+- `client.js`
+- `protos.js`
+- `server.js`
+- `test.js`
 
-## Judul Tingkat 2
 
-### Judul Tingkat 3
+#### Keterangan:
 
-#### Judul Tingkat 4
+> `client.js` Managemen untuk koneksi ke gRPC server.
 
-##### Judul Tingkat 5
+> `protos.js` Managemen untuk Protobuf gRPC.
 
-###### Judul Tingkat 6
+> `server.js` Main project gRPC Server.
 
-## Daftar
-
-### Daftar tak terurut:
-- Item 1
-- Item 2
-  - Subitem 2.1
-  - Subitem 2.2
-- Item 3
-
-### Daftar terurut:
-1. Item 1
-2. Item 2
-   1. Subitem 2.1
-   2. Subitem 2.2
-3. Item 3
-
-## Tautan
-
-[Ini adalah tautan ke Google](https://www.google.com)
-
-## Gambar
-
-![Logo Markdown](https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Markdown-mark.svg/1920px-Markdown-mark.svg.png)
-
-## Kutipan
-
-> Ini adalah kutipan.
+> `test.js` contoh consume gRPC Server.
 
 ## Kode
 

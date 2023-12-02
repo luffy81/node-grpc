@@ -72,3 +72,18 @@ client.productService.getByid(
         console.log("Successfully get a product item:", order);
     }
 );
+
+/**
+ * contoh implementasi stream server
+ */
+
+const call = client.productService.getAllStream({});
+const productAll = [];
+call.on('data', (response) => {
+    console.log('Successfully get all product stream:', response);
+    productAll.push(response);
+});
+
+call.on('end', () => {
+    console.log('Streaming completed:', productAll);
+});

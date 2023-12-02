@@ -1,12 +1,8 @@
 const grpc = require("@grpc/grpc-js");
 const protoLoader = require('@grpc/proto-loader');
 
-// const PROTO_PATHS = require('./protos');
-// const packageDefinition = protoLoader.loadSync(PROTO_PATHS, { keepCase: true });
-// const protos  = grpc.loadPackageDefinition(packageDefinition);
-
-const OrderService   = require('./order.service');
-const ProductService = require('./product.service');
+const OrderService   = require('./services/order.service');
+const ProductService = require('./services/product.service');
 
 const PROTO_PATH = require('./protos');
 const options = {

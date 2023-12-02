@@ -3,6 +3,7 @@ syntax = "proto3";
 import "general.proto";
 
 service ProductService {
+    rpc GetAllStream (Empty) returns (stream Product) {}
     rpc GetAll (Empty) returns (ProductList) {}
     rpc GetByid (ProductId) returns (Product) {}
     rpc Delete (ProductId) returns (Empty) {}

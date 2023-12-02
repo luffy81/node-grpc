@@ -16,6 +16,16 @@ class ProductService {
         // Implementation logic for getUserById
     }
 
+    getAllStream(call) {
+        for (const iterator of product) {
+            call.write(iterator);
+        }
+        // for (let i = 1; i <= 5; i++) {
+        //     call.write({ message: `Data ${i}` });
+        // }
+        call.end();
+    }
+
     getAll(_, callback) {
         callback(null, { product });
     }
