@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+import "general.proto";
+
+service OrderService {
+    rpc GetAll (Empty) returns (OrderList) {}
+    rpc GetByid (OrderId) returns (Order) {}
+    rpc Delete (OrderId) returns (Empty) {}
+    rpc Edit (Order) returns (Order) {}
+    rpc Add (Order) returns (Order) {}
+}
+
+message Order {
+    string id = 1;
+    string title = 2;
+    string body = 3;
+    string postImage = 4;
+}
+
+message OrderId {
+    string id = 1;
+}
+
+message OrderList {
+    repeated Order order = 1;
+}
